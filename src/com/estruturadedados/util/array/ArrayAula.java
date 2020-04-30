@@ -1,4 +1,4 @@
-package com.estruturadedados.array;
+package com.estruturadedados.util.array;
 
 public class ArrayAula {
 

@@ -1,8 +1,16 @@
 package com.entitys;
 
 public class Estudante {
-    String nome;
 
+    private String nome;
+    private Integer id;
+    String email;
+
+    public Estudante(String nome,String email,Integer id){
+        this.nome = nome;
+        this.email = email;
+        this.id = id;
+    }
     public String getNome() {
         return nome;
     }
@@ -19,9 +27,15 @@ public class Estudante {
         this.email = email;
     }
 
-    String email;
+    public void setId(Integer idNovo){
+        this.id = idNovo;
+    }
+
+    public int getid(){
+        return this.id;
+    }
 
     public String toString(){
-        return  this.nome+", "+this.email;
+        return  this.nome+", "+this.email+", "+this.id;
     }
 }

@@ -1,4 +1,4 @@
-package com.estruturadedados.arraylists;
+package com.estruturadedados.util.arraylists;
 
 import com.entitys.Produto;
 

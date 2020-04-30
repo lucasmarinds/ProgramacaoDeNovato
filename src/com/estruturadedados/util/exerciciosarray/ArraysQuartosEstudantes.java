@@ -1,4 +1,4 @@
-package com.estruturadedados.exerciciosarray;
+package com.estruturadedados.util.exerciciosarray;
 
 import com.entitys.Estudante;
 
@@ -15,7 +15,7 @@ public class ArraysQuartosEstudantes {
 
             for(int i=0; i<quantosQuartos; i++){
 
-                Estudante estudante = new Estudante();
+                Estudante estudante = new Estudante("mocka","mockado@mock.com",1);
                 scanner.nextLine();
                 estudante.setNome(scanner.nextLine());
                 estudante.setEmail(scanner.next());

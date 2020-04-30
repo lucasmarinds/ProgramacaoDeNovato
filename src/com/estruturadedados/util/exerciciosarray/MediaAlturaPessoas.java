@@ -1,4 +1,4 @@
-package com.estruturadedados.exerciciosarray;
+package com.estruturadedados.util.exerciciosarray;
 
 import java.util.Locale;
 import java.util.Scanner;

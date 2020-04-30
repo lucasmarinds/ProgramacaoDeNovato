@@ -1,4 +1,4 @@
-package com.langexample;
+package com.pacotelangstring;
 
 public class StringTests {
 
