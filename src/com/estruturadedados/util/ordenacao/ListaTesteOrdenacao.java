@@ -21,7 +21,7 @@ public class ListaTesteOrdenacao {
         lista.add(aluno4);
         System.out.println(lista.toString());
         TesteOrdenacaoLista ordenarPorId = new TesteOrdenacaoLista();
-        lista.sort(ordenarPorId);
+        lista.sort();
         System.out.println(lista.toString());
     }
 }
