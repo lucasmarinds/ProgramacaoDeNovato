@@ -11,13 +11,27 @@ public class TesteOrdenacaoLista implements Comparator<Estudante> {
      */
     @Override
     public int compare(Estudante a, Estudante b) {
-        if(a.getid() > b.getid()) {
-            return 1;
-        }
-        else if(a.getid() < b.getid()){
-            return -1;
-        }
-        return 0;
+
+        /**
+         * Primeira forma e mais legivel de se fazer uma Ordenação.
+         */
+        return Integer.compare(a.getid(),b.getid());
+
+        /**
+         * Segundo forma para se fazer a ordenação.
+         * return a.getid() - b.getid();
+         */
+
+        /**
+         * Terceira forma para se fazer a ordenação
+         *         if(a.getid() > b.getid()) {
+         *             return 1;
+         *         }
+         *         else if(a.getid() < b.getid()){
+         *             return -1;
+         *         }
+         *         return 0;
+         */
     }
 
 }

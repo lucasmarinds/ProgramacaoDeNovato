@@ -1,6 +1,6 @@
 package com.entitys;
 
-public class Estudante {
+public class Estudante implements Comparable<Estudante>{
 
     private String nome;
     private Integer id;
@@ -37,5 +37,10 @@ public class Estudante {
 
     public String toString(){
         return  this.nome+", "+this.email+", "+this.id;
+    }
+
+    @Override
+    public int compareTo(Estudante o) {
+        return Integer.compare(this.id, o.id);
     }
 }
