@@ -32,10 +32,26 @@ public class TesteSerializacaoComHeranca {
         estudante.setContaAluno(contaUm);
         estudante.setEmail("ugodastrevas@gmail.com");
 
+        /**
+         * Fluxo binario:
+         * 41 line - gera o arquivo do tipo bin.
+         * 42 line - grava no meu bin o meu objeto estudante
+         * 43 line - fecha a utilização do meu recurso instanciado
+         */
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("estudante.bin"));
         objectOutputStream.writeObject(estudante);
         objectOutputStream.close();
 
+        /**
+         * Fluxo de Entrada do binario:
+         * 55 line - recebe ccomo entrada o arquivo que foi criado pelo FileoutputStream
+         * 56 line - ele faz com que você adicione ao throws na classe com ClassNotFoundException porque, caso você
+         * utilize do método readObject e a classe não existe mais ele retornara esse exception, e de volta como
+         * já sabemos qual classe a gente transformou então criamos uma referencia daquele tipo e fazemos um cast no
+         * retorno do método e assim podemos acessar os atributos de nosso aluno
+         * 57 line - fechamos a utilização do nosso recurso instanciado.
+         * 58 line - fazemos acesso aos métodos de nosso objeto que esta dentro do bin.
+         */
         ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("estudante.bin"));
         Estudante aluno = (Estudante) objectInputStream.readObject();
         objectInputStream.close();
