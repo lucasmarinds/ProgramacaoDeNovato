@@ -2,8 +2,10 @@ package br.com.programacaodenovato.entitys;
 
 import java.beans.Transient;
 import java.io.Serializable;
+import java.util.Comparator;
+import java.util.Objects;
 
-public class Estudante extends Pessoa{
+public class Estudante extends Pessoa implements Comparable {
 
     /**
      * Quando a gente faz a serialização de uma classe automaticamente o java gera essa identificação para nossa classe
@@ -61,5 +63,45 @@ public class Estudante extends Pessoa{
 
     public int getId(){
         return this.id;
+    }
+
+
+
+    /**
+     *Se está como override é porque você está vindo da classe Object, se não for você pode criar o seu proprio equals.
+     *
+     */
+    @Override
+    public boolean equals(Object objeto) {
+        Estudante estudante = (Estudante) objeto;
+        if(this.nome == estudante.nome){
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Com o hashCode definido, a tabela de espalhamento por dentro do HashSet vai espalhar os elementos dentro do conjunto
+     * apartir do primeiro caracter que tem na String, porém pode ser um defeito quando se trata de varios Objetos que contem
+     * a primeira letra, fazendo com que dificulte a busca pelo mesmo objeto dentro conjunto evitando colisões que seria
+     * fazer a tabela perder mais tempo procurando por um objeto dentro do conjunto, logo é mais facil utilizar alguma
+     * maneira que separe os elementos dentro do conjunto com mais facilidade para serem buscados pela tabela de espalhamento
+     * pelo método .contains() do HashSet, neste caso de vez de guardamos apenas a primeira letra do nome, podemos utilizar
+     * do HashCode da propria classe String, que já separa da maneira mais separadamente possivel.
+     */
+    @Override
+    public int hashCode() {
+        //return this.nome.charAt(0);
+        return this.nome.hashCode();
+    }
+
+    public String toString(){
+        return this.nome+" "+this.email+" "+this.id;
+    }
+
+    @Override
+    public int compareTo(Object obj) {
+        Estudante estudante = (Estudante) obj;
+        return Integer.compare(this.id,estudante.id);
     }
 }

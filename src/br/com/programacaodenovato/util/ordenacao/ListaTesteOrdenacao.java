@@ -27,7 +27,7 @@ public class ListaTesteOrdenacao {
          */
 
         /**
-         * Outra Maneira de poder se utilizar a nossa ordenação criada.
+         * Outra Maneira de poder se utilizar a nossa ordenação criada,porém continua não sendo a melhor.
          * lista.sort(new TesteOrdenacaoLista());
          */
 
