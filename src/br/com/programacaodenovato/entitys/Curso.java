@@ -68,7 +68,7 @@ public class Curso {
         if(mapaEstudantes.containsKey(id)) {
             return mapaEstudantes.get(id);
         }
-        throw new NoSuchElementException("Este cara não existe");
+        throw new NoSuchElementException("Este Aluno não existe");
     }
 
 //    método que busca aluno por ID sem utilizar HashMap<K,V>

@@ -8,7 +8,7 @@ public class TesdeUnicodeEEnconding8 {
         String c = "C";
         System.out.println(c.codePointAt(0)); // ? valor de 67 sendo o mesmo codepoint da tabela ASCII
 
-        Charset charSet = Charset.defaultCharset(); //pega o deafult charset da maquina do usuario
+        Charset charSet = Charset.defaultCharset(); //pega o default charset da maquina do usuario
         System.out.println(charSet.displayName()); //mostra qual o charset que o sistema esta utilizando
 
 

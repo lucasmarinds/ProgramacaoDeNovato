@@ -1,4 +1,4 @@
-package br.com.programacaodenovato.util.exerciciosarray;
+package br.com.programacaodenovato.exercicios;
 
 import br.com.programacaodenovato.entitys.Estudante;
 

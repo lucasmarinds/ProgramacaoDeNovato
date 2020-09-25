@@ -16,7 +16,7 @@ public class TesteDeSaidaPadrao1 {
 
         bufferedWriter.write("Meu nome é Lusca Rusca Busca Fusca");
         bufferedWriter.newLine();//Adiciona mais uma linha para poder escrever
-        bufferedWriter.write("123456, olha de corno");
+        bufferedWriter.write("123456, olha corno");
 
         bufferedWriter.close();
 
