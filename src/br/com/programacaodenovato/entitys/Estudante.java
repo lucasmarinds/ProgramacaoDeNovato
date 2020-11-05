@@ -68,7 +68,7 @@ public class Estudante extends Pessoa implements Comparable {
 
 
     /**
-     *Se está como override é porque você está vindo da classe Object, se não for você pode criar o seu proprio equals.
+     *Se está como override é porque é uma sobrescrita do método que está vindo da classe Object, se não for você pode criar o seu proprio equals.
      *
      */
     @Override
@@ -87,7 +87,7 @@ public class Estudante extends Pessoa implements Comparable {
      * fazer a tabela perder mais tempo procurando por um objeto dentro do conjunto, logo é mais facil utilizar alguma
      * maneira que separe os elementos dentro do conjunto com mais facilidade para serem buscados pela tabela de espalhamento
      * pelo método .contains() do HashSet, neste caso de vez de guardamos apenas a primeira letra do nome, podemos utilizar
-     * do HashCode da propria classe String, que já separa da maneira mais separadamente possivel.
+     * do HashCode da propria classe String, que já separa da melhor maneira possivel.
      */
     @Override
     public int hashCode() {

@@ -1,7 +1,7 @@
 package br.com.programacaodenovato.exception;
 
 /**
- * Classe usada para fazer exemplo de Exceptions.
+ * Classe usada para fazer exemplo de Exceptions e aprende sobre o try/catch.
  * @author marin
  */
 public class TestOfExceptions {
